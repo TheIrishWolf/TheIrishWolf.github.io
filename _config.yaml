@@ -1,3 +1,46 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+# Site settings
+title: TheIrishWolf's Portfolio
+description: Portfolio of projects in fabrication, CAD design, and engineering.
+author: Delaney
+# email: your-email@example.com
+url: "https://TheIrishWolf.github.io"
+baseurl: ""
+
+# Social links
+github_username: yourusername
+# linkedin_username: yourlinkedin
+instagram_username: yourinstagram
+
+# Theme
+theme: minima
+# or jekyll-theme-minimal
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Navigation links
+header_pages:
+  - index.md
+  - projects.md
+  - about.md
+  - contact.md
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections for projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
