@@ -1,15 +1,15 @@
 # Site settings
 title: TheIrishWolf's Portfolio
 description: Portfolio of projects in fabrication, CAD design, and engineering.
-author: Delaney
-# email: your-email@example.com
+author: TheIrishWolf
+email: darkmarksman5@gmail.com
 url: "https://TheIrishWolf.github.io"
 baseurl: ""
 
 # Social links
-github_username: yourusername
+github_username: TheIrishWolf
 # linkedin_username: yourlinkedin
-instagram_username: yourinstagram
+# instagram_username: yourinstagram
 
 # Theme
 theme: minima
