@@ -36,10 +36,10 @@ plugins:
 collections:
   images:
     output: true
-    permalink: /images/:name/
+    permalink: /_images/:name/
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /_projects/:name/
 
 # Defaults
 defaults:
