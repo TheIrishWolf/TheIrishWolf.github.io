@@ -1,192 +1,185 @@
 <style>
 
-/* ---------- THEME VARIABLES ---------- */
-
-:root {
-  --bg: #ffffff;
-  --text: #1f2933;
-  --muted: #6b7280;
-  --card: #f8fafc;
-  --border: #e5e7eb;
-  --accent: #2563eb;
+:root{
+--bg:#ffffff;
+--text:#1f2933;
+--muted:#6b7280;
+--card:#f8fafc;
+--border:#e5e7eb;
+--accent:#2563eb;
 }
 
-/* Dark mode */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f172a;
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    --card: #1e293b;
-    --border: #334155;
-    --accent: #60a5fa;
-  }
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#0f172a;
+--text:#e5e7eb;
+--muted:#9ca3af;
+--card:#1e293b;
+--border:#334155;
+--accent:#60a5fa;
+}
 }
 
-/* ---------- GLOBAL ---------- */
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  line-height: 1.6;
+body{
+background:var(--bg);
+color:var(--text);
+font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+line-height:1.6;
 }
 
-/* ---------- NAVBAR ---------- */
+/* NAVBAR */
 
-.navbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:40px;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:50px;
 }
 
-.nav-links a {
-  margin-left:20px;
-  text-decoration:none;
-  color:var(--muted);
-  font-weight:500;
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:var(--muted);
+font-weight:500;
 }
 
-.nav-links a:hover {
-  color:var(--accent);
+.nav-links a:hover{
+color:var(--accent);
 }
 
-/* ---------- HERO ---------- */
+/* HERO */
 
-.hero {
-  margin:60px 0;
+.hero{
+margin:60px 0;
 }
 
-.hero h1 {
-  font-size:2.8rem;
-  margin-bottom:10px;
+.hero h1{
+font-size:2.7rem;
+margin-bottom:10px;
 }
 
-.hero p {
-  color:var(--muted);
-  font-size:1.1rem;
+.hero p{
+color:var(--muted);
+font-size:1.1rem;
 }
 
-/* ---------- SECTION ---------- */
+/* SECTION */
 
-.section {
-  margin-top:60px;
+.section{
+margin-top:70px;
 }
 
-/* ---------- PROJECT GRID ---------- */
-
-.projects-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-  margin-top:25px;
+.section h2{
+margin-bottom:20px;
 }
 
-.card {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:22px;
-  transition:all 0.25s ease;
+/* PROJECT GRID */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
 }
 
-.card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 12px 28px rgba(0,0,0,0.15);
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+padding:22px;
+transition:all .25s ease;
 }
 
-.card h3 {
-  margin-top:0;
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,.15);
 }
 
-.card p {
-  color:var(--muted);
+.card p{
+color:var(--muted);
 }
 
-.card a {
-  text-decoration:none;
-  color:var(--accent);
-  font-weight:500;
+.card a{
+color:var(--accent);
+text-decoration:none;
+font-weight:500;
 }
 
-.card a:hover {
-  text-decoration:underline;
+.card a:hover{
+text-decoration:underline;
 }
 
-/* ---------- SKILLS ---------- */
+/* SKILLS */
 
-.skills span {
-  display:inline-block;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:6px 10px;
-  margin:5px;
-  font-size:0.9rem;
+.skills span{
+display:inline-block;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:8px;
+padding:6px 10px;
+margin:5px;
+font-size:.9rem;
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 
-.footer {
-  margin-top:80px;
-  padding-top:20px;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:0.9rem;
+.footer{
+margin-top:80px;
+padding-top:20px;
+border-top:1px solid var(--border);
+color:var(--muted);
+font-size:.9rem;
 }
 
 </style>
 
 <div class="navbar">
 
-**Your Name**
+<strong>Your Name</strong>
 
 <div class="nav-links">
-
-<a href="#projects">Projects</a> <a href="#skills">Skills</a> <a href="#contact">Contact</a>
-
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 </div>
+
 </div>
 
 <div class="hero">
 
-# Hi, I'm Your Name 👋
+<h1>Hi, I'm Your Name 👋</h1>
 
+<p>
 Software developer focused on building reliable, well-designed software and useful tools.
-
 I enjoy working across the stack, contributing to open source, and learning new technologies.
+</p>
 
 </div>
 
----
-
 <div class="section" id="projects">
 
-## Featured Projects
+<h2>Featured Projects</h2>
 
 <div class="projects-grid">
 
 <div class="card">
 
-### Project One
+<h3>Project One</h3>
 
-A web application designed to solve a specific problem for users.
+<p>A web application designed to solve a specific problem.</p>
 
-**Tech:** React • Node.js • PostgreSQL
+<p><strong>Tech:</strong> React • Node.js • PostgreSQL</p>
 
-<a href="https://github.com/username/project-one">Repository</a> <a href="https://username.github.io/project-one">Live Demo</a>
+<a href="https://github.com/username/project-one">Repository</a><br> <a href="https://username.github.io/project-one">Live Demo</a>
 
 </div>
 
 <div class="card">
 
-### Project Two
+<h3>Project Two</h3>
 
-Automation tool that simplifies repetitive developer workflows.
+<p>Automation tool that simplifies repetitive developer workflows.</p>
 
-**Tech:** Python • FastAPI
+<p><strong>Tech:</strong> Python • FastAPI</p>
 
 <a href="https://github.com/username/project-two">Repository</a>
 
@@ -194,11 +187,11 @@ Automation tool that simplifies repetitive developer workflows.
 
 <div class="card">
 
-### Project Three
+<h3>Project Three</h3>
 
-Experimental project exploring modern browser APIs.
+<p>Experimental project exploring modern browser APIs.</p>
 
-**Tech:** JavaScript • Web APIs
+<p><strong>Tech:</strong> JavaScript • Web APIs</p>
 
 <a href="https://github.com/username/project-three">Repository</a>
 
@@ -206,11 +199,11 @@ Experimental project exploring modern browser APIs.
 
 <div class="card">
 
-### Project Four
+<h3>Project Four</h3>
 
-Data visualization dashboard for interactive analytics.
+<p>Interactive data visualization dashboard.</p>
 
-**Tech:** Python • D3.js
+<p><strong>Tech:</strong> Python • D3.js</p>
 
 <a href="https://github.com/username/project-four">Repository</a>
 
@@ -220,11 +213,9 @@ Data visualization dashboard for interactive analytics.
 
 </div>
 
----
-
 <div class="section" id="skills">
 
-## Skills
+<h2>Skills</h2>
 
 <div class="skills">
 
@@ -234,20 +225,18 @@ Data visualization dashboard for interactive analytics.
 
 </div>
 
----
-
 <div class="section" id="contact">
 
-## Contact
+<h2>Contact</h2>
 
-* GitHub: https://github.com/username
-* LinkedIn: https://linkedin.com/in/username
-* Email: [your.email@example.com](mailto:your.email@example.com)
+<p>
+GitHub: https://github.com/username<br>
+LinkedIn: https://linkedin.com/in/username<br>
+Email: your.email@example.com
+</p>
 
 </div>
 
 <div class="footer">
-
 © 2026 Your Name — Built with GitHub Pages
-
 </div>
