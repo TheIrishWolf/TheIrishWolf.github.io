@@ -170,7 +170,3 @@
   Email: delaneyfitzpatrick77@gmail.com
   </p>
 </div>
-
-<div class="footer">
-© 2026 Delaney Fitzpatrick — Built with GitHub Pages
-</div>
