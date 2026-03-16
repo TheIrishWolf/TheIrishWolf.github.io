@@ -147,6 +147,7 @@
       <p>{{ project.description }}</p>
       <div class="project-skills">
         <h3 href="{{ project.skills }}"></h3>
+      </div>
       <div class="links">
         <a href="{{ project.github }}">Full Project</a>
       </div>
