@@ -1,10 +1,9 @@
-remote_theme: jekyll-theme-so-simple
-locale: en-CAD 
+#locale: en-CAD 
 title: "Delaney's Portfolio"
 description: "Portfolio of projects in design, manufacturing, and craftsmanship"
 baseurl: ""
 url: "https://TheIrishWolf.github.io"
-logo: _images/WolfProfile.png
+#logo: _images/WolfProfile.png
 
 # Personal
 author: TheIrishWolf
@@ -19,6 +18,7 @@ plugins:
 # - jekyll-include-cache
 
 # Build settings
+remote_theme: jekyll-theme-so-simple
 markdown: kramdown
 permalink: pretty
 
