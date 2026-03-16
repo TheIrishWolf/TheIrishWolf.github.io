@@ -34,6 +34,9 @@ plugins:
 
 # Collections for projects
 collections:
+  images:
+    output: true
+    permalink: /images/:name/
   projects:
     output: true
     permalink: /projects/:name/
