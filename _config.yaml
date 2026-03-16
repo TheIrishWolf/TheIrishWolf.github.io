@@ -36,7 +36,7 @@ collections:
   projects:
     output: true
     permalink: /_projects/:name/
-/:collection/:path/
+#/:collection/:path/
 
 # Front Matter Defaults
 defaults:
