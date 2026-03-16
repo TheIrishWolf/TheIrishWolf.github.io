@@ -1,9 +1,9 @@
-#locale: en-CAD 
+locale: en-CA
 title: Delaney's Portfolio
 description: "Portfolio of projects in design, manufacturing, and craftsmanship"
 baseurl: ""
 url: "https://TheIrishWolf.github.io"
-#logo: _images/WolfProfile.png
+#logo: images/WolfProfile.png
 
 # Personal
 author: TheIrishWolf
@@ -18,7 +18,7 @@ plugins:
 # - jekyll-include-cache
 
 # Build settings
-remote_theme: jekyll-theme-so-simple
+remote_theme: mmistakes/so-simple-theme
 markdown: kramdown
 permalink: pretty
 
@@ -32,11 +32,10 @@ header_pages:
 collections:
   images:
     output: true
-    permalink: /_images/:name/
+    permalink: /images/:name/
   projects:
     output: true
-    permalink: /_projects/:name/
-#/:collection/:path/
+    permalink: /projects/:name/
 
 # Front Matter Defaults
 defaults:
@@ -59,10 +58,10 @@ defaults:
 
 
  # Footer Links
- footer_links:
+footer_links:
   - title: GitHub
     url: https://github.com/TheIrishWolf
     icon: fab fa-github-square
   - title: Feed
-#    url: atom.xml
+#   url: atom.xml
     icon: fas fa-rss-square
