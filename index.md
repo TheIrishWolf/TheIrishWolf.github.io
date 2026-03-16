@@ -134,7 +134,7 @@ font-size:.9rem;
 
 <div class="navbar">
 
-<strong>Your Name</strong>
+<strong>Delaney Fitzpatrick</strong>
 
 <div class="nav-links">
 <a href="#projects">Projects</a>
@@ -146,15 +146,18 @@ font-size:.9rem;
 
 <div class="hero">
 
-<h1>Hi, I'm Your Name 👋</h1>
+<h1>Hi, my name is Delaney</h1>
 
 <p>
-Software developer focused on building reliable, well-designed software and useful tools.
-I enjoy working across the stack, contributing to open source, and learning new technologies.
+Maker with a passion for craft and quality.
+I enjoy creating beautiful things, solving complex problems, and helping people
 </p>
 
 </div>
 
+<div class="section" id="projects">
+
+<h2>Featured Projects</h2>
 
 <div class="projects-grid">
   {% for project in site.projects %}
@@ -173,9 +176,7 @@ I enjoy working across the stack, contributing to open source, and learning new 
 </div>
 
 
-<div class="section" id="projects">
 
-<h2>Featured Projects</h2>
 
 <div class="projects-grid">
 
@@ -188,42 +189,6 @@ I enjoy working across the stack, contributing to open source, and learning new 
 <p><strong>Tech:</strong> React • Node.js • PostgreSQL</p>
 
 <a href="https://github.com/username/project-one">Repository</a><br> <a href="https://username.github.io/project-one">Live Demo</a>
-
-</div>
-
-<div class="card">
-
-<h3>Project Two</h3>
-
-<p>Automation tool that simplifies repetitive developer workflows.</p>
-
-<p><strong>Tech:</strong> Python • FastAPI</p>
-
-<a href="https://github.com/username/project-two">Repository</a>
-
-</div>
-
-<div class="card">
-
-<h3>Project Three</h3>
-
-<p>Experimental project exploring modern browser APIs.</p>
-
-<p><strong>Tech:</strong> JavaScript • Web APIs</p>
-
-<a href="https://github.com/username/project-three">Repository</a>
-
-</div>
-
-<div class="card">
-
-<h3>Project Four</h3>
-
-<p>Interactive data visualization dashboard.</p>
-
-<p><strong>Tech:</strong> Python • D3.js</p>
-
-<a href="https://github.com/username/project-four">Repository</a>
 
 </div>
 
@@ -242,17 +207,12 @@ I enjoy working across the stack, contributing to open source, and learning new 
 </div>
 
 </div>
-
 <div class="section" id="contact">
-
 <h2>Contact</h2>
-
 <p>
-GitHub: https://github.com/username<br>
-LinkedIn: https://linkedin.com/in/username<br>
-Email: your.email@example.com
+GitHub: https://github.com/TheIrishWolf<br>
+Email: delaneyfitzpatrick77@gmail.com
 </p>
-
 </div>
 
 <div class="footer">
