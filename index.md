@@ -102,6 +102,7 @@
   
   /* SKILLS */
   .skills span{
+    margin-top:20px;
     display:inline-block;
     background:var(--card);
     border:1px solid var(--border);
@@ -120,7 +121,6 @@
     font-size:.9rem;
   }
 </style>
-
 <div class="navbar">
   <strong>Delaney Fitzpatrick</strong>
   <div class="nav-links">
