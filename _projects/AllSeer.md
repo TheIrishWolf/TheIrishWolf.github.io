@@ -1,9 +1,9 @@
 ---
 title: Project AllSeer
 description: A portable modular sensor interface platform for field data collection
-image: /_images/AllSeerFinal.jpeg
+image: /images/AllSeerFinal.jpeg
 skills: [EagleCAD, KiCAD, TinkerCAD]
 ---
 # Project AllSeer
 ### A portable modular sensor interface platform for field data collection
-![AllSeer](/_images/AllSeerFinal.jpeg)
+![AllSeer](/images/AllSeerFinal.jpeg)
