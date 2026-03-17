@@ -7,17 +7,13 @@
   </head>
   <body>
 
-    {% raw %}
-    {% include header.html %}
-    {% endraw %}
+    <div w3-include-html="header.html"></div> 
 
     <main>
       {{ content }}
     </main>
-    
-    {% raw %}
-    {% include footer.html %}
-    {% endraw %}
+
+     <div w3-include-html="footer.html"></div>
 
   </body>
 

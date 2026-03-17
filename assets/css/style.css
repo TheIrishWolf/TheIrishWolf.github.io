@@ -101,11 +101,11 @@
     text-decoration:none;
     font-weight:500;
   }
-  /*.project-card img{
+  .project-card img{
     width: 100%;
     height: auto;
     object-fit: cover;
-  }*/
+  }
   .project-image {
      max-width: 300px;
      height: auto;
