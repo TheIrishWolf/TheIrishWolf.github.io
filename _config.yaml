@@ -28,14 +28,14 @@ header_pages:
   - projects.md
   - about.md
 
-# Collections for projects
+# Collections
 collections:
   images:
     output: true
-    permalink: /images/:name/
+    permalink: /assets/images/:name/
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /_projects/:name/
 
 # Front Matter Defaults
 defaults:
