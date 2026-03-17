@@ -1,3 +1,8 @@
+---
+layout: default
+title: index
+permalink: /index/
+---
 <style>
   :root{
     --bg:#ffffff;
