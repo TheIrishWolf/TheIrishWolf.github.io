@@ -28,7 +28,7 @@ permalink: /index/
     font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     line-height:1.6;
   }
-  
+
   /* NAVBAR */
   .navbar{
     display:flex;
@@ -45,7 +45,7 @@ permalink: /index/
   .nav-links a:hover{
     color:var(--accent);
   }
-  
+
   /* HERO */
   .hero{
     margin:60px 0;
@@ -58,7 +58,7 @@ permalink: /index/
     color:var(--muted);
     font-size:1.1rem;
   }
-  
+
   /* SECTION */
   .section{
     margin-top:70px;
@@ -66,7 +66,7 @@ permalink: /index/
   .section h2{
     margin-bottom:20px;
   }
-  
+
   /* PROJECT GRID */
   .projects-grid{
     display:grid;
@@ -104,7 +104,7 @@ permalink: /index/
     margin:5px;
     font-size:.9rem;
   }
-  
+
   /* SKILLS */
   .skills span{
     margin-top:20px;
@@ -116,7 +116,7 @@ permalink: /index/
     margin:5px;
     font-size:.9rem;
   }
-  
+
   /* FOOTER */
   .footer{
     margin-top:80px;

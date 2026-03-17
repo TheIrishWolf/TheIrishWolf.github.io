@@ -24,7 +24,7 @@ permalink: pretty
 
 # Navigation links
 header_pages:
-  - index.html
+  - index.md
   - projects.md
   - about.md
 
