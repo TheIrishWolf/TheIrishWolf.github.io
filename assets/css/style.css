@@ -101,9 +101,16 @@
     text-decoration:none;
     font-weight:500;
   }
+  /*.project-card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }*/
   .project-image {
-     max-width:100px;
-     height:auto;
+     max-width: 300px;
+     height: auto;
+     display: block;
+     margin: 0 auto;
   }
   .project-card a:hover{
     text-decoration:underline;
