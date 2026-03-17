@@ -2,7 +2,7 @@ locale: en-CA
 title: Delaney's Portfolio
 description: "Portfolio of projects in design, manufacturing, and craftsmanship"
 baseurl: ""
-url: "https://TheIrishWolf.github.io"
+url: https://theirishwolf.github.io/
 logo: /assets/images/WolfProfile.png
 
 # Personal
