@@ -101,6 +101,10 @@
     text-decoration:none;
     font-weight:500;
   }
+  .project-image {
+     max-width:100px;
+     height:auto;
+  }
   .project-card a:hover{
     text-decoration:underline;
   }
