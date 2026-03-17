@@ -18,7 +18,8 @@ plugins:
 # - jekyll-include-cache
 
 # Build settings
-remote_theme: mmistakes/so-simple-theme
+#remote_theme: mmistakes/so-simple-theme
+theme: minima
 markdown: kramdown
 permalink: pretty
 
