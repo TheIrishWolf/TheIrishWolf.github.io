@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
 
-  {% raw %}
-  {% include header.html %}
-  {% endraw %}
+    {% raw %}
+    {% include header.html %}
+    {% endraw %}
 
-  <main>
-    {{ content }}
-  </main>
+    <main>
+      {{ content }}
+    </main>
+    
+    {% raw %}
+    {% include footer.html %}
+    {% endraw %}
 
-</body>
+  </body>
+
 </html>
