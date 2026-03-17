@@ -2,4 +2,4 @@
 layout: home
 title: Home
 ---
-Hello World
+Hello World, this is my site
