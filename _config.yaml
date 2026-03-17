@@ -3,10 +3,10 @@ title: Delaney's Portfolio
 description: "Portfolio of projects in design, manufacturing, and craftsmanship"
 baseurl: ""
 url: "https://TheIrishWolf.github.io"
-#logo: images/WolfProfile.png
+logo: /assets/images/WolfProfile.png
 
 # Personal
-author: TheIrishWolf
+author: "Delaney Fitzpatrick"
 email: delaneyfitzpatrick77@gmail.com
 github_username: TheIrishWolf
 
@@ -24,7 +24,7 @@ permalink: pretty
 
 # Navigation links
 header_pages:
-  - index.md
+  - index.html
   - projects.md
   - about.md
 
@@ -55,13 +55,3 @@ defaults:
       layout: project
       comments: true
       share: true
-
-
- # Footer Links
-footer_links:
-  - title: GitHub
-    url: https://github.com/TheIrishWolf
-    icon: fab fa-github-square
-  - title: Feed
-#   url: atom.xml
-    icon: fas fa-rss-square
