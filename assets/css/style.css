@@ -155,8 +155,33 @@
     list-style: none;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-links a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.9rem;
+
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+
     display: inline-flex;
     align-items: center;
-    gap: 20px;
+    gap: 6px;
+    
+    background-color: rgba(255,255,255,0.05);
+    transition: all 0.2s ease;
+  }
+  .footer-links a:hover {
+    text-decoration: none;   /* keeps underline off on hover */
+    color: #fff;             /* optional: subtle hover effect */
+    opacity: 0.7;
+    border-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
   }
 </style>
