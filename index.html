@@ -13,21 +13,31 @@ title: Home
 
   <div class="section" id="projects">
     <h2>Featured Projects</h2>
+
+    {% assign featured_projects = site.projects | where_exp: "project", "project.tags contains 'Featured'" %}
     <div class="projects-grid">
-      {% for project in site.projects %}
+      {% for project in featured_projects %}
       <div class="project-card">
+        <!-- Display project image, name, and description -->
         <img src="{{ project.image }}" alt="{{ project.title }}">
         <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
-        <div class="project-skills">
-          <h3 href="{{ project.skills }}"></h3>
+
+        <!-- Display Tag Badges -->
+        <div class="project-tags">
+          {% for tag in project.tags %}
+            {% unless tag == "Featured" %}
+              <a href="/tags/{{ tag | slugify }}" class="tag-badge">{{ tag }}</a>
+            {% endunless %}
+          {% endfor %}
         </div>
+
+        <!-- Display link to project page -->
         <div class="links">
           <a href="{{ project.github }}">Full Project</a>
         </div>
       </div>
-    {% endfor %}
-
+      {% endfor %}
     </div>
   </div>
 

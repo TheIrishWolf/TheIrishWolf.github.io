@@ -3,7 +3,7 @@ layout: default
 title: Fidget Toys
 description: A collection of custom machined fidget toys
 image: /assets/images/Fidgets/Fidgets2.jpeg
-skills: [Machining]
+tags: [Machining, Featured]
 ---
 # Project
 A collection of custom machined fidget toys
