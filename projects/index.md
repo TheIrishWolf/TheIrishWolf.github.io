@@ -8,26 +8,33 @@ entries_layout: grid
 ---
 # Projects
 A list of projects I've worked on
-{% assign sorted_projects = site.projects | sort: "title" %}
 
+<!-- Tag filter bar (with url links) -->
 <div class="tag-filter-bar">
   <!-- Always include "All" -->
-  <span class="tag-badge active" data-filter="all">All</span>
+  <a href="/projects" class="tag-badge" data-filter="all">All</a>
 
   {% assign all_tags = site.projects | map: "tags" | join: "," | split: "," | uniq | sort %}
 
   {% for tag in all_tags %}
     {% unless tag == "Featured" or tag == "" %}
-      <span class="tag-badge" data-filter="{{ tag }}">{{ tag }}</span>
+      {% assign tag_slug = tag | slugify %}
+      <a href="/projects?tag={{ tag_slug }}"
+         class="tag-badge"
+         data-filter="{{ tag_slug }}">
+        {{ tag }}
+      </a>
     {% endunless %}
   {% endfor %}
 </div>
-
+<!-- Projects Grid -->
+{% assign sorted_projects = site.projects | sort: "title" %}
 <div class="section" id="projects">
   <h2>All Projects</h2>
   <div class="projects-grid">
     {% for project in sorted_projects %}
-    <div class="project-card" data-tags="{{ project.tags | join: ',' }}">
+    <div class="project-card"
+         data-tags="{% for tag in project.tags %}{{ tag | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
       <!-- Display project image, name, and description -->
       <img src="{{ project.image }}" alt="{{ project.title }}">
       <h3>{{ project.title }}</h3>
@@ -50,44 +57,74 @@ A list of projects I've worked on
     {% endfor %}
   </div>
 </div>
-
+<!-- Javascript (move to js folder later) -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".project-card");
-  const filters = document.querySelectorAll("[data-filter]");
+  const filters = document.querySelectorAll(".tag-filter-bar .tag-badge");
 
-  filters.forEach(filter => {
-    filter.addEventListener("click", () => {
-      const selected = filter.dataset.filter;
+  // Parse URL tags into an array
+  const params = new URLSearchParams(window.location.search);
+  let selectedTags = params.get("tag");
+  selectedTags = selectedTags ? selectedTags.split(",") : ["all"];
 
-      // update active state
-      filters.forEach(f => f.classList.remove("active"));
-      filter.classList.add("active");
+  function applyFilter(tagsArray) {
+    cards.forEach(card => {
+      const cardTags = card.dataset.tags.split(",");
 
-      cards.forEach(card => {
-        const tags = card.dataset.tags.split(",");
-
-        if (selected === "all" || tags.includes(selected)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
+      if (tagsArray.includes("all")) {
+        card.style.display = "block";
+      } else {
+        // Show card if it has ANY of the selected tags
+        const match = tagsArray.every(tag => cardTags.includes(tag));
+        card.style.display = match ? "block" : "none";
+      }
     });
-  });
 
-  // OPTIONAL: clicking a tag on a card filters too
-  const tagButtons = document.querySelectorAll(".filter-tag");
+    // Update active state
+    filters.forEach(f => f.classList.remove("active"));
+    filters.forEach(f => {
+      if (tagsArray.includes(f.dataset.filter)) {
+        f.classList.add("active");
+      } else if (tagsArray.includes("all") && f.dataset.filter === "all") {
+        f.classList.add("active");
+      }
+    });
+  }
 
-  tagButtons.forEach(tag => {
-    tag.addEventListener("click", () => {
-      const selected = tag.dataset.tag;
+  applyFilter(selectedTags);
 
-      cards.forEach(card => {
-        const tags = card.dataset.tags.split(",");
-        card.style.display =
-          tags.includes(selected) ? "block" : "none";
-      });
+  // Click handlers
+  filters.forEach(filter => {
+    filter.addEventListener("click", (e) => {
+      e.preventDefault();
+      const tag = filter.dataset.filter;
+
+      // Update selectedTags array
+      if (tag === "all") {
+        selectedTags = ["all"];
+      } else {
+        // Remove "all" if present
+        selectedTags = selectedTags.filter(t => t !== "all");
+
+        // Toggle tag in array
+        if (selectedTags.includes(tag)) {
+          selectedTags = selectedTags.filter(t => t !== tag);
+        } else {
+          selectedTags.push(tag);
+        }
+
+        // If no tags selected, revert to "all"
+        if (selectedTags.length === 0) selectedTags = ["all"];
+      }
+
+      // Update URL
+      const newUrl = selectedTags.includes("all")
+        ? "/projects"
+        : `/projects?tag=${selectedTags.join(",")}`;
+      window.history.pushState({}, "", newUrl);
+
+      applyFilter(selectedTags);
     });
   });
 });
