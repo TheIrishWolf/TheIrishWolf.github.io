@@ -6,15 +6,13 @@
   </head>
   <body>
 
-    <div w3-include-html="header.html">
-    </div>
+    {% include header.html %}
 
     <main>
       {{ content }}
     </main>
 
-     <div w3-include-html="footer.html">
-     </div>
+     {% include footer.html %}
 
   </body>
 </html>
