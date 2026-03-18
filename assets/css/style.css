@@ -153,6 +153,7 @@
   .footer-links{
     color:var(--muted);
     font-weight: bold;
+    display: inline-flex;
     gap: 20px;
   }
 </style>
