@@ -52,7 +52,7 @@
     border-radius: 999px;
     border: 1px solid #333;
 
-    background-color: rgba(20, 20, 20, 0.6);
+    background-color: transparent;
     backdrop-filter: blur(10px);
   }
   .brand{
