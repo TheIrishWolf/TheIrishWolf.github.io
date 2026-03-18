@@ -150,4 +150,9 @@
     color:var(--muted);
     font-size:.9rem;
   }
+  .footer-links{
+    color:var(--muted);
+    font-weight: bold;
+    gap: 20px;
+  }
 </style>
