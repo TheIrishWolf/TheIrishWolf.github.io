@@ -152,8 +152,11 @@
   }
   .footer-links{
     color:var(--muted);
+    list-style: none;
+    text-decoration: none;
     font-weight: bold;
     display: inline-flex;
+    align-items: center;
     gap: 20px;
   }
 </style>
