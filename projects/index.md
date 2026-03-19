@@ -52,11 +52,6 @@ A list of projects I've worked on
           {% endunless %}
         {% endfor %}
       </div>
-
-      <!-- Display link to project page -->
-      <div class="links">
-        <a href="{{ project.github }}">Full Project</a>
-      </div>
     </div>
     {% endfor %}
   </div>
