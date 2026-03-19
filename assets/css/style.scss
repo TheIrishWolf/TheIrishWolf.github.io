@@ -8,9 +8,6 @@
   --card:#7e8c54; /* Moss Green */
   --border:#3e2723; /* Earth Brown */
   --accent:#bc815f; /* Light Earth brown */
-
-  --transition:.2; /* Animation transition time */
-  --borderthickness:1px;
 }
 @media (prefers-color-scheme: dark){
   :root{ /* Dark mode */
@@ -88,7 +85,7 @@ main img { /* Sets image display style */
   margin-bottom:10px;
   justify-content: center;
 }
-.hero p{ /* Intro element plaintext styling */
+.intro p{ /* Intro element plaintext styling */
   color:var(--text);
   font-size:1.1rem;
   justify-content: center;
@@ -161,7 +158,7 @@ main img { /* Sets image display style */
   border-radius:14px;
   padding:22px;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   justify-content: center;
 }
 .project-card:hover{ /*  */
@@ -215,6 +212,7 @@ main img { /* Sets image display style */
   border: 1px solid var(--border);
   color: var(--accent);
   background-color: var(--bg);
+  transition: all 0.2s ease;
 }
 
 /* Tag filter bar */
@@ -235,7 +233,7 @@ main img { /* Sets image display style */
 .tag-filter-bar .tag-badge { /*  */
   cursor: pointer;
   text-decoration: none;
-  color: var(--accent);
+  color: var(--text);
 }
 
 /* Skills */
@@ -283,8 +281,8 @@ main img { /* Sets image display style */
   border: 1px solid var(--border);
 
   display: inline-flex;
-  /*align-items: center;*/
-  /*justify-content: center; */
+  align-items: center;
+  justify-content: center;
   gap: 6px;
 
   background-color: var(--bg);
