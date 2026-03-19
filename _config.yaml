@@ -1,3 +1,4 @@
+theme: minima
 locale: en-CA
 title: Delaney's Portfolio
 description: "Portfolio of projects in design, manufacturing, and craftsmanship"
@@ -19,7 +20,6 @@ plugins:
 
 # Build settings
 #remote_theme: mmistakes/so-simple-theme
-theme: minima
 markdown: kramdown
 permalink: pretty
 
