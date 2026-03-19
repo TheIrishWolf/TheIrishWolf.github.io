@@ -2,7 +2,7 @@
 layout: project
 title:
 description:
-image:
+image: /assets/images/
 tags: []
 ---
-![]()
+![](/assets/images/)
