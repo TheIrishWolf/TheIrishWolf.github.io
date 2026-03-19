@@ -1,4 +1,5 @@
 <style>
+/* Colors */
   :root{
     --bg:#7e8c54; /* Moss Green */
     --text:#3e2723; /* Earth Brown */
@@ -17,18 +18,9 @@
       --accent:#858F4B; /* Light Moss Green */
     }
   }
-  @media (prefers-color-scheme: light){
-    :root{
-      --bg:#7e8c54; /* Moss Green */
-      --text:#3e2723; /* Earth Brown */
-      --muted:#48462c; /* Dark Lichen */
-      --card:#7e8c54; /* Moss Green */
-      --border:#3e2723; /* Earth Brown */
-      --accent:#858F4B; /* Light Moss Green */
-    }
-  }
+  /* Page */
   body{
-    background:var(--bg);
+    background:var(--bg) !important;
     color:var(--text);
     font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     line-height:1.6;
@@ -217,7 +209,7 @@
   .tag-badge.active {
     color: var(--text);
     border-color: var(--border);
-    background-color: var(--bg));
+    background-color: var(--bg);
     cursor: pointer;
     text-decoration: none;
   }
