@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Coffee Centre
 description: A custom coffee centre for a kitchen, with matching cast iron pan display
 image: assets/images/CoffeeCentre/CoffeeCentre5.jpeg

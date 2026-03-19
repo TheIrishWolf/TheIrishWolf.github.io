@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Acoustic Levitator
 description: A simple acoustic levitation device that holds small, lightweight objects aloft using standing sound waves
 image: /assets/images/AcousticLevitator/AcousticLevitator1.JPG

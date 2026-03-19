@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Wands
 description: Magic wands I've been making to unwind for as long as I can remember
 image: /assets/images/Wands/Wand1.jpeg

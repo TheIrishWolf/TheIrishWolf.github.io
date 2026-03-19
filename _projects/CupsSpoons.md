@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Cups & Spoons
 description: Some simple hobby pieces I enjoy making
 image: /assets/images/CupsSpoons/CupsSpoons5.JPG

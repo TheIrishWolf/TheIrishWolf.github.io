@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Terrariums
 description: Some little terrariums I enjoy making and decorating with
 image: /assets/images/CupsSpoons/CupsSpoons5.JPG

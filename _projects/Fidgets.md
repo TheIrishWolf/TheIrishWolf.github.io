@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Fidget Toys
 description: A collection of custom machined fidget toys
 image: /assets/images/Fidgets/Fidgets2.jpeg
