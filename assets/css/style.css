@@ -130,7 +130,8 @@
     border:1px solid var(--border);
     border-radius:14px;
     padding:22px;
-    transition:all .25s ease;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
   .project-card:hover{
     transform:translateY(-6px);

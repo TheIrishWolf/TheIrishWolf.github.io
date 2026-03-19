@@ -34,7 +34,8 @@ A list of projects I've worked on
   <div class="projects-grid">
     {% for project in sorted_projects %}
     <div class="project-card"
-         data-tags="{% for tag in project.tags %}{{ tag | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+      data-url="{{ project.url }}"
+      data-tags="{% for tag in project.tags %}{{ tag | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
       <!-- Display project image, name, and description -->
       <img src="{{ project.image }}" alt="{{ project.title }}">
       <h3>{{ project.title }}</h3>
@@ -97,6 +98,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  // Make entire card clickable
+  document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", (e) => {
+      // Prevent click if user clicked a link inside the card
+      if (e.target.closest("a")) return;
+
+      const url = card.dataset.url;
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
 
   function updateURL(tagsArray) {
     const newUrl = tagsArray.includes("all")
