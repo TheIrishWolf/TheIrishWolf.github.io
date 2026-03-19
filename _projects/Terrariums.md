@@ -7,7 +7,7 @@ tags: [Woodworking]
 ---
 # Terrariums
 Some little terrariums I enjoy making and decorating with
-![Terrariums1](/assets/images/Terrariums/Terrariums1.jpg)
+![Terrariums1](/assets/images/Terrariums/Terrariums1.jpeg)
 ![Terrariums2](/assets/images/Terrariums/Terrariums2.jpeg)
 ![Terrariums3](/assets/images/Terrariums/Terrariums3.jpeg)
 ![Terrariums4](/assets/images/Terrariums/Terrariums4.jpeg)
