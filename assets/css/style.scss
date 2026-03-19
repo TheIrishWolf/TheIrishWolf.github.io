@@ -8,6 +8,9 @@
   --card:#7e8c54; /* Moss Green */
   --border:#3e2723; /* Earth Brown */
   --accent:#bc815f; /* Light Earth brown */
+
+  --transition:.2; /* Animation transition time */
+  --borderthickness:1px;
 }
 @media (prefers-color-scheme: dark){
   :root{ /* Dark mode */
@@ -21,7 +24,7 @@
 }
 
 /* ---------- Setup ---------- */
-body{ /* Sets body content style in layout */
+body{ /* Sets body content style in layout, also contains header and footer styles */
   background:var(--bg);
   color:var(--text);
   font-family:"Lucida Console", "Courier New", monospace;
@@ -34,10 +37,18 @@ main img { /* Sets image display style */
 }
 .active { /* Sets properties for active state for given element */
   border-bottom: 2px solid var(--border);
-  color: var(--muted);
+  color: var(--text);
 }
 .hover { /* Sets properties for hover state for given element */
   color: var(--accent);
+}
+.project-layout main img { /* Sets properties for images in the project-layout class */
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  justify-content: center;
 }
 /* ---------- Section formatting ---------- */
 /* Header */
@@ -56,7 +67,201 @@ main img { /* Sets image display style */
   color:var(--bg);
   font-size:.9rem;
 }
-.footer-links{
+/* Section */
+.section{ /* Creates the .section container to which navbar links can be generated */
+  margin-top:70px;
+  justify-content: center;
+}
+.section h2{ /* Sets properties of plaintext inside a given section  */
+  margin-bottom:20px;
+  justify-content: center;
+}
+
+/* ---------- Elements ---------- */
+/* Intro */
+.intro{ /* Intro element styling */
+  margin:60px 0;
+  justify-content: center;
+}
+.intro h1{ /* Intro element header styling */
+  font-size:2.7rem;
+  margin-bottom:10px;
+  justify-content: center;
+}
+.hero p{ /* Intro element plaintext styling */
+  color:var(--text);
+  font-size:1.1rem;
+  justify-content: center;
+}
+
+/* Navbar (no longer used) */
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: var(--borderthickness) solid var(--border);
+
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+.nav-logo { /*  */
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-links { /*  */
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a{ /*  */
+  margin-left:20px;
+  text-decoration:none;
+  color: var(--text);
+  font-weight:500;
+  font-size: 0.9rem;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: var(--borderthickness) solid var(--border);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.nav-links a:hover{ /*  */
+  color: var(--accent);
+  border: var(--borderthickness) solid var(--border);
+  background-color: var(--bg);
+}
+.nav-links a.active { /*  */
+  border: var(--borderthickness) solid var(--border);
+}
+
+/* Project Grid */
+.projects-grid{ /*  */
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.project-card{ /*  */
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  justify-content: center;
+}
+.project-card:hover{ /*  */
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,.15);
+}
+.project-card p{ /*  */
+  color:var(--muted);
+}
+.project-card a{ /*  */
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:500;
+}
+.project-card img{ /*  */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  justify-content: center;
+}
+.project-image { /*  */
+   max-width: 300px;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+}
+.project-card a:hover{ /*  */
+  text-decoration: none;
+}
+
+/* Project tags */
+.project-tags { /*  */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.tag-badge { /*  */
+  font-size: 0.75rem;
+  color: var(--text);
+
+  padding: 4px 8px;
+  border-radius: 999px;
+
+  border: var(--borderthickness) solid var(--border);
+  background-color: transparent;
+
+  transition: all 0.2s ease;
+}
+.tag-badge:hover { /*  */
+  border: var(--borderthickness) solid var(--border);
+  color: var(--accent);
+  background-color: var(--bg);
+}
+
+/* Tag filter bar */
+.tag-filter-bar { /*  */
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tag-badge.active { /*  */
+  color: var(--muted);
+  border: var(--borderthickness) solid var(--border);
+  background-color: var(--bg);
+
+  text-decoration: none;
+}
+.tag-filter-bar .tag-badge { /*  */
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* Skills */
+.project-skills{ /*  */
+  display:inline-block;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:6px 10px;
+  margin:5px;
+  font-size:.9rem;
+}
+.skills span{ /*  */
+  margin-top:20px;
+  display:inline-block;
+  background:var(--card);
+  border:var(--border) solid var(--border);
+  border-radius:8px;
+  padding:6px 10px;
+  margin:5px;
+  font-size:.9rem;
+  justify-content: center;
+}
+
+/* Footer social links */
+.social-links{ /* Defines behaviour of social links list  */
   color:var(--text);
   list-style: none;
   text-decoration: none;
@@ -68,236 +273,28 @@ main img { /* Sets image display style */
   margin: 0;
   padding: 0;
 }
-.footer-links a{
+.social-links a{ /* Social link styling */
   text-decoration: none;
   color: var(--text);
   font-size: 0.9rem;
 
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: var(--borderthickness) solid var(--border);
 
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  /*align-items: center;*/
+  /*justify-content: center; */
   gap: 6px;
 
   background-color: var(--bg);
   transition: all 0.2s ease;
 }
-.footer-links a:hover {
+.social-links a:hover { /* Social link hover styling */
   text-decoration: none;
+  cursor: pointer;
   color: var(--text);
   opacity: 0.7;
-  border-color: var(--border);
+  border: var(--borderthickness) solid var(--border);
   background-color: var(--bg);
-}
-
-/* ---------- Elements ---------- */
-/* HERO */
-.hero{
-  margin:60px 0;
-  justify-content: center;
-}
-.hero h1{
-  font-size:2.7rem;
-  margin-bottom:10px;
-  justify-content: center;
-}
-.hero p{
-  color:var(--muted);
-  font-size:1.1rem;
-  justify-content: center;
-}
-
-/* NAVBAR */
-.navbar{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  width: fit-content;
-  margin: 0 auto;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-
-  background-color: transparent;
-  backdrop-filter: blur(5px);
-}
-/*
-.brand{
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: bold;
-  padding: 6px 10px;
-} */
-.nav-logo {
-  color: var(--text);
-  font-weight: bold;
-  text-decoration: none;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
-.nav-links a{
-  margin-left:20px;
-  text-decoration:none;
-  color: var(--text);
-  font-weight:500;
-  font-size: 0.9rem;
-
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  background-color: transparent;
-  transition: all 0.2s ease;
-}
-.nav-links a:hover{
-  color: var(--accent);
-  border-color: var(--border);
-  background-color: var(--bg);
-}
-.nav-links a.active {
-  color: var(--border);
-  border-color: var(--border);
-}
-
-/* SECTION */
-.section{
-  margin-top:70px;
-  justify-content: center;
-}
-.section h2{
-  margin-bottom:20px;
-  justify-content: center;
-}
-.project-layout main img {
-  max-width: 400px;   /* or whatever limit you want */
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  justify-content: center;
-}
-
-/* PROJECT GRID */
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-}
-.project-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:22px;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  justify-content: center;
-}
-.project-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 28px rgba(0,0,0,.15);
-}
-.project-card p{
-  color:var(--muted);
-}
-.project-card a{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:500;
-}
-.project-card img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  justify-content: center;
-}
-.project-image {
-   max-width: 300px;
-   height: auto;
-   display: block;
-   margin: 0 auto;
-}
-.project-card a:hover{
-  text-decoration: none;
-}
-
-/* Project tags */
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
-}
-.tag-badge {
-  font-size: 0.75rem;
-  color: var(--text);
-
-  padding: 4px 8px;
-  border-radius: 999px;
-
-  border: 1px solid var(--border);
-  background-color: transparent;
-
-  transition: all 0.2s ease;
-}
-.tag-badge:hover {
-  color: var(--accent);
-  border-color: var(--border);
-  background-color: var(--bg);
-}
-
-/* Tag filter bar */
-.tag-filter-bar {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.tag-badge.active {
-  color: var(--muted);
-  border-color: var(muted);
-  background-color: var(--bg);
-  cursor: pointer;
-  text-decoration: none;
-}
-.tag-filter-bar .tag-badge {
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--accent);
-}
-
-/* SKILLS */
-.project-skills{
-  display:inline-block;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:6px 10px;
-  margin:5px;
-  font-size:.9rem;
-}
-.skills span{
-  margin-top:20px;
-  display:inline-block;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:6px 10px;
-  margin:5px;
-  font-size:.9rem;
-  justify-content: center;
 }
