@@ -56,3 +56,4 @@ A list of projects I've worked on
     {% endfor %}
   </div>
 </div>
+<script src="/assets/js/script.js"></script>
