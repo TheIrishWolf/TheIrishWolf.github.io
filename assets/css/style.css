@@ -1,6 +1,6 @@
 <style>
   :root{
-    --bg:#ffffff;
+    --bg:#7e8c54;
     --text:#1f2933;
     --muted:#6b7280;
     --card:#f8fafc;
@@ -9,7 +9,7 @@
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#0f172a;
+      --bg:#3e2723;
       --text:#e5e7eb;
       --muted:#9ca3af;
       --card:#1e293b;
@@ -22,6 +22,11 @@
     color:var(--text);
     font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     line-height:1.6;
+  }
+  main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
   .active {
     border-bottom: 2px solid white;
@@ -117,6 +122,13 @@
   }
   .section h2{
     margin-bottom:20px;
+  }
+  .project-layout main img {
+    max-width: 600px;   /* or whatever limit you want */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
   }
 
   /* PROJECT GRID */
