@@ -62,7 +62,7 @@
   }
   .brand{
     text-decoration: none;
-    color: var(--accent);
+    color: var(--text);
     font-weight: bold;
     padding: 6px 10px;
   }
@@ -117,7 +117,7 @@
     justify-content: center;
   }
   .hero p{
-    color:var(--muted);
+    color:var(--text);
     font-size:1.1rem;
     justify-content: center;
   }
@@ -163,7 +163,7 @@
     color:var(--muted);
   }
   .project-card a{
-    color:var(--accent);
+    color:var(--text);
     text-decoration:none;
     font-weight:500;
   }
@@ -288,7 +288,7 @@
   }
   .footer-links a:hover {
     text-decoration: none;   /* keeps underline off on hover */
-    color: var(--text);             /* optional: subtle hover effect */
+    color: var(--accent);             /* optional: subtle hover effect */
     opacity: 0.7;
     border-color: var(--border);
     background-color: var(--bg);
