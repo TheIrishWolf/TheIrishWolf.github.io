@@ -25,10 +25,10 @@
 
 /* ---------- Setup ---------- */
 body{ /* Sets body content style in layout, also contains header and footer styles */
-  background:var(--bg);
-  color:var(--text);
-  font-family:"Lucida Console", "Courier New", monospace;
-  line-height:1.6;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Lucida Console", "Courier New", monospace;
+  line-height: 1.6;
 }
 main img { /* Sets image display style */
   max-width: 80%;
@@ -36,15 +36,14 @@ main img { /* Sets image display style */
   display: block;
 }
 .active { /* Sets properties for active state for given element */
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
   color: var(--text);
 }
 .hover { /* Sets properties for hover state for given element */
   color: var(--accent);
 }
 .project-layout main img { /* Sets properties for images in the project-layout class */
-  max-width: 400px;
-  width: 100%;
+  max-width: 60%;
   height: auto;
   display: block;
   margin: 1rem auto;
@@ -61,6 +60,7 @@ main img { /* Sets image display style */
 }
 /* Footer */
 .site-footer{
+  background: var(--bg);
   margin-top:80px;
   padding-top:20px;
   border-top:1px solid var(--border);
@@ -94,8 +94,8 @@ main img { /* Sets image display style */
   justify-content: center;
 }
 
-/* Navbar (no longer used) */
-.navbar{
+/* Navbar */
+.navbar{ /* navbar element styling */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,7 +105,7 @@ main img { /* Sets image display style */
   margin: 0 auto;
   padding: 8px 16px;
   border-radius: 999px;
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
 
   background-color: transparent;
   backdrop-filter: blur(5px);
@@ -131,7 +131,7 @@ main img { /* Sets image display style */
 
   padding: 6px 10px;
   border-radius: 999px;
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
 
   display: inline-flex;
   align-items: center;
@@ -142,11 +142,11 @@ main img { /* Sets image display style */
 }
 .nav-links a:hover{ /*  */
   color: var(--accent);
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
   background-color: var(--bg);
 }
 .nav-links a.active { /*  */
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
 }
 
 /* Project Grid */
@@ -157,7 +157,7 @@ main img { /* Sets image display style */
 }
 .project-card{ /*  */
   background:var(--card);
-  border:1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius:14px;
   padding:22px;
   cursor: pointer;
@@ -206,13 +206,13 @@ main img { /* Sets image display style */
   padding: 4px 8px;
   border-radius: 999px;
 
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
   background-color: transparent;
 
   transition: all 0.2s ease;
 }
 .tag-badge:hover { /*  */
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
   color: var(--accent);
   background-color: var(--bg);
 }
@@ -226,8 +226,8 @@ main img { /* Sets image display style */
   justify-content: center;
 }
 .tag-badge.active { /*  */
-  color: var(--muted);
-  border: var(--borderthickness) solid var(--border);
+  color: var(text);
+  border: 1px solid var(--border);
   background-color: var(--bg);
 
   text-decoration: none;
@@ -242,7 +242,7 @@ main img { /* Sets image display style */
 .project-skills{ /*  */
   display:inline-block;
   background:var(--card);
-  border:1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius:8px;
   padding:6px 10px;
   margin:5px;
@@ -252,7 +252,7 @@ main img { /* Sets image display style */
   margin-top:20px;
   display:inline-block;
   background:var(--card);
-  border:var(--border) solid var(--border);
+  border: 1px solid var(--border);
   border-radius:8px;
   padding:6px 10px;
   margin:5px;
@@ -280,7 +280,7 @@ main img { /* Sets image display style */
 
   padding: 6px 10px;
   border-radius: 999px;
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
 
   display: inline-flex;
   /*align-items: center;*/
@@ -295,6 +295,6 @@ main img { /* Sets image display style */
   cursor: pointer;
   color: var(--text);
   opacity: 0.7;
-  border: var(--borderthickness) solid var(--border);
+  border: 1px solid var(--border);
   background-color: var(--bg);
 }
