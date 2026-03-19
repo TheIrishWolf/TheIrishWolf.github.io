@@ -44,7 +44,11 @@ A list of projects I've worked on
       <div class="project-tags">
         {% for tag in project.tags %}
           {% unless tag == "Featured" %}
-            <a href="/tags/{{ tag | slugify }}" class="tag-badge">{{ tag }}</a>
+            <a href="/projects?tag={{ tag | slugify }}"
+               class="tag-badge filter-tag"
+               data-filter="{{ tag | slugify }}">
+              {{ tag }}
+            </a>
           {% endunless %}
         {% endfor %}
       </div>
@@ -62,8 +66,9 @@ A list of projects I've worked on
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".project-card");
   const filters = document.querySelectorAll(".tag-filter-bar .tag-badge");
+  const cardTags = document.querySelectorAll(".filter-tag");
 
-  // Parse URL tags into an array
+  // Get tags from URL
   const params = new URLSearchParams(window.location.search);
   let selectedTags = params.get("tag");
   selectedTags = selectedTags ? selectedTags.split(",") : ["all"];
@@ -75,55 +80,79 @@ document.addEventListener("DOMContentLoaded", () => {
       if (tagsArray.includes("all")) {
         card.style.display = "block";
       } else {
-        // Show card if it has ANY of the selected tags
-        const match = tagsArray.every(tag => cardTags.includes(tag));
+        // OR logic (recommended UX)
+        const match = cardTags.some(tag => tagsArray.includes(tag));
         card.style.display = match ? "block" : "none";
       }
     });
 
-    // Update active state
+    // Update active state in filter bar
     filters.forEach(f => f.classList.remove("active"));
     filters.forEach(f => {
-      if (tagsArray.includes(f.dataset.filter)) {
-        f.classList.add("active");
-      } else if (tagsArray.includes("all") && f.dataset.filter === "all") {
+      if (
+        tagsArray.includes(f.dataset.filter) ||
+        (tagsArray.includes("all") && f.dataset.filter === "all")
+      ) {
         f.classList.add("active");
       }
     });
   }
 
+  function updateURL(tagsArray) {
+    const newUrl = tagsArray.includes("all")
+      ? "/projects"
+      : `/projects?tag=${tagsArray.join(",")}`;
+
+    window.history.pushState({}, "", newUrl);
+  }
+
   applyFilter(selectedTags);
 
-  // Click handlers
+  // 🔹 Filter bar clicks
   filters.forEach(filter => {
     filter.addEventListener("click", (e) => {
       e.preventDefault();
       const tag = filter.dataset.filter;
 
-      // Update selectedTags array
       if (tag === "all") {
         selectedTags = ["all"];
       } else {
-        // Remove "all" if present
         selectedTags = selectedTags.filter(t => t !== "all");
 
-        // Toggle tag in array
         if (selectedTags.includes(tag)) {
           selectedTags = selectedTags.filter(t => t !== tag);
         } else {
           selectedTags.push(tag);
         }
 
-        // If no tags selected, revert to "all"
-        if (selectedTags.length === 0) selectedTags = ["all"];
+        if (selectedTags.length === 0) {
+          selectedTags = ["all"];
+        }
       }
 
-      // Update URL
-      const newUrl = selectedTags.includes("all")
-        ? "/projects"
-        : `/projects?tag=${selectedTags.join(",")}`;
-      window.history.pushState({}, "", newUrl);
+      updateURL(selectedTags);
+      applyFilter(selectedTags);
+    });
+  });
 
+  // 🔹 Card tag clicks
+  cardTags.forEach(tagEl => {
+    tagEl.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const tag = tagEl.dataset.filter;
+
+      selectedTags = selectedTags.filter(t => t !== "all");
+
+      if (!selectedTags.includes(tag)) {
+        selectedTags.push(tag);
+      }
+
+      if (selectedTags.length === 0) {
+        selectedTags = ["all"];
+      }
+
+      updateURL(selectedTags);
       applyFilter(selectedTags);
     });
   });
