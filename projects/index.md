@@ -8,7 +8,7 @@ entries_layout: grid
 # Projects
 A list of projects I've worked on
 
-<!-- Tag filter bar (with url links) -->
+<!-- Tag filter bar -->
 <div class="tag-filter-bar">
   <!-- Always include "All" -->
   <a href="/projects" class="tag-badge" data-filter="all">All</a>
@@ -56,4 +56,3 @@ A list of projects I've worked on
     {% endfor %}
   </div>
 </div>
-<script src="/assets/js/script.js"></script>
