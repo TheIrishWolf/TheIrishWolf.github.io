@@ -1,6 +1,6 @@
 ---
 ---
-/* Colors */
+/* ---------- Colors ---------- */
 :root{ /* Light mode */
   --bg:#7e8c54; /* Moss Green */
   --text:#3e2723; /* Earth Brown */
@@ -19,28 +19,94 @@
     --accent:#858F4B; /* Light Moss Green */
   }
 }
-/* Page */
-body{
+
+/* ---------- Setup ---------- */
+body{ /* Sets body content style in layout */
   background:var(--bg);
   color:var(--text);
   font-family:"Lucida Console", "Courier New", monospace;
   line-height:1.6;
 }
-main img {
-  max-width: 100%;
+main img { /* Sets image display style */
+  max-width: 80%;
   height: auto;
   display: block;
 }
-.active {
+.active { /* Sets properties for active state for given element */
   border-bottom: 2px solid var(--border);
+  color: var(--muted);
 }
+.hover { /* Sets properties for hover state for given element */
+  color: var(--accent);
+}
+/* ---------- Section formatting ---------- */
 /* Header */
 .site-header {
   position: sticky;
   top: 10px;
   z-index: 1000;
-
   display: flex;
+  justify-content: center;
+}
+/* Footer */
+.site-footer{
+  margin-top:80px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+  color:var(--bg);
+  font-size:.9rem;
+}
+.footer-links{
+  color:var(--text);
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.footer-links a{
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  background-color: var(--bg);
+  transition: all 0.2s ease;
+}
+.footer-links a:hover {
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.7;
+  border-color: var(--border);
+  background-color: var(--bg);
+}
+
+/* ---------- Elements ---------- */
+/* HERO */
+.hero{
+  margin:60px 0;
+  justify-content: center;
+}
+.hero h1{
+  font-size:2.7rem;
+  margin-bottom:10px;
+  justify-content: center;
+}
+.hero p{
+  color:var(--muted);
+  font-size:1.1rem;
   justify-content: center;
 }
 
@@ -60,12 +126,13 @@ main img {
   background-color: transparent;
   backdrop-filter: blur(5px);
 }
+/*
 .brand{
   text-decoration: none;
   color: var(--accent);
   font-weight: bold;
   padding: 6px 10px;
-}
+} */
 .nav-logo {
   color: var(--text);
   font-weight: bold;
@@ -104,22 +171,6 @@ main img {
 .nav-links a.active {
   color: var(--border);
   border-color: var(--border);
-}
-
-/* HERO */
-.hero{
-  margin:60px 0;
-  justify-content: center;
-}
-.hero h1{
-  font-size:2.7rem;
-  margin-bottom:10px;
-  justify-content: center;
-}
-.hero p{
-  color:var(--muted);
-  font-size:1.1rem;
-  justify-content: center;
 }
 
 /* SECTION */
@@ -249,49 +300,4 @@ main img {
   margin:5px;
   font-size:.9rem;
   justify-content: center;
-}
-
-/* Footer */
-.site-footer{
-  margin-top:80px;
-  padding-top:20px;
-  border-top:1px solid var(--border);
-  color:var(--bg);
-  font-size:.9rem;
-}
-.footer-links{
-  color:var(--text);
-  list-style: none;
-  text-decoration: none;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
-.footer-links a{
-  text-decoration: none;
-  color: var(--text);
-  font-size: 0.9rem;
-
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-
-  background-color: var(--bg);
-  transition: all 0.2s ease;
-}
-.footer-links a:hover {
-  text-decoration: none;
-  color: var(--text);
-  opacity: 0.7;
-  border-color: var(--border);
-  background-color: var(--bg);
 }
