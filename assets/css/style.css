@@ -7,7 +7,7 @@
     --muted:#48462c; /* Dark Lichen */
     --card:#7e8c54; /* Moss Green */
     --border:#3e2723; /* Earth Brown */
-    --accent:#858F4B; /* Light Moss Green */
+    --accent:#bc815f; /* Light Earth brown */
   }
   @media (prefers-color-scheme: dark){
     :root{
@@ -160,7 +160,7 @@
     box-shadow:0 12px 28px rgba(0,0,0,.15);
   }
   .project-card p{
-    color:var(--muted);
+    color:var(--text);
   }
   .project-card a{
     color:var(--text);

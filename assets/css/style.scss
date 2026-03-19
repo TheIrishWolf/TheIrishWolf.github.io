@@ -7,7 +7,7 @@
     --muted:#48462c; /* Dark Lichen */
     --card:#7e8c54; /* Moss Green */
     --border:#3e2723; /* Earth Brown */
-    --accent:#858F4B; /* Light Moss Green */
+    --accent:#bc815f; /* Light Earth brown */
   }
   @media (prefers-color-scheme: dark){
     :root{
@@ -217,14 +217,16 @@
     justify-content: center;
   }
   .tag-badge.active {
-    color: var(--text);
-    border-color: var(--border);
+    color: var(--muted);
+    border-color: var(muted);
     background-color: var(--bg);
     cursor: pointer;
     text-decoration: none;
   }
   .tag-filter-bar .tag-badge {
     cursor: pointer;
+    text-decoration: none;
+    color: var(--accent);
   }
 
   /* SKILLS */
@@ -287,8 +289,8 @@
     transition: all 0.2s ease;
   }
   .footer-links a:hover {
-    text-decoration: none;   /* keeps underline off on hover */
-    color: var(--text);             /* optional: subtle hover effect */
+    text-decoration: none;
+    color: var(--text);
     opacity: 0.7;
     border-color: var(--border);
     background-color: var(--bg);
