@@ -1,8 +1,10 @@
 ---
 layout: project
-title:
-description:
+title: Template
+description: A template
 image: /assets/images/
-tags: []
+tags: [Template]
 ---
+# Template
+A template
 ![](/assets/images/)

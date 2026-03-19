@@ -3,7 +3,7 @@ layout: project
 title: Deck
 description: A Lions Bay deck/balcony we revitalized
 image: /assets/images/Deck/Deck1.jpeg
-tags: []
+tags: [Construction, Woodworking]
 ---
 # Deck
 A Lions Bay deck/balcony we revitalized

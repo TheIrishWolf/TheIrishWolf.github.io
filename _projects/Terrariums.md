@@ -3,7 +3,7 @@ layout: project
 title: Terrariums
 description: Some little terrariums I enjoy making and decorating with
 image: /assets/images/Terrariums/Terrariums9.jpeg
-tags: [Woodworking]
+tags: [Woodworking, Design, Pyrography]
 ---
 # Terrariums
 Some little terrariums I enjoy making and decorating with
