@@ -25,7 +25,7 @@ A portable modular sensor interface platform for field data collection
 ![AllSeer16](/assets/images/AllSeer/AllSeer16.jpg)
 ![AllSeer17](/assets/images/AllSeer/AllSeer17.jpg)
 ![AllSeer18](/assets/images/AllSeer/AllSeer18.jpg)
-![AllSeer19](/assets/images/AllSeer/AllSeer19.MOV)
+![AllSeer19](/assets/images/AllSeer/AllSeer19.mov)
 ![AllSeer20](/assets/images/AllSeer/AllSeer20.jpg)
 ![AllSeer21](/assets/images/AllSeer/AllSeer21.jpg)
 ![AllSeer22](/assets/images/AllSeer/AllSeer22.jpg)
