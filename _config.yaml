@@ -1,4 +1,3 @@
-#theme: minima
 locale: en-CA
 title: Delaney's Portfolio
 description: "Portfolio of projects in design, manufacturing, and craftsmanship"
@@ -12,14 +11,11 @@ email: delaneyfitzpatrick77@gmail.com
 github_username: TheIrishWolf
 
 plugins:
-- jekyll-remote-theme
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-sitemap
-# - jekyll-include-cache
 
 # Build settings
-#remote_theme: mmistakes/so-simple-theme
 markdown: kramdown
 permalink: pretty
 
