@@ -1,20 +1,30 @@
 <style>
   :root{
-    --bg:#7e8c54;
-    --text:#3e2723;
-    --muted:#34331e;
-    --card:#7e8c54;
-    --border:#3e2723;
-    --accent:#3d4328;
+    --bg:#7e8c54; /* Moss Green */
+    --text:#3e2723; /* Earth Brown */
+    --muted:#48462c; /* Dark Lichen */
+    --card:#7e8c54; /* Moss Green */
+    --border:#3e2723; /* Earth Brown */
+    --accent:#858F4B; /* Light Moss Green */
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#3e2723;
-      --text:#7e8c54;
-      --muted:#34331e;
-      --card:#3e2723;
-      --border:#7e8c54;
-      --accent:#3d4328;
+      --bg:#3e2723; /* Earth Brown */
+      --text:#7e8c54; /* Moss Green */
+      --muted:#48462c; /* Dark Lichen */
+      --card:#3e2723; /* Earth Brown */
+      --border:#7e8c54; /* Moss Green */
+      --accent:#858F4B; /* Light Moss Green */
+    }
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#7e8c54; /* Moss Green */
+      --text:#3e2723; /* Earth Brown */
+      --muted:#48462c; /* Dark Lichen */
+      --card:#7e8c54; /* Moss Green */
+      --border:#3e2723; /* Earth Brown */
+      --accent:#858F4B; /* Light Moss Green */
     }
   }
   body{
@@ -78,7 +88,7 @@
   .nav-links a{
     margin-left:20px;
     text-decoration:none;
-    color: var(--muted);
+    color: var(--text);
     font-weight:500;
     font-size: 0.9rem;
 
