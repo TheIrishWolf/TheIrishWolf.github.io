@@ -22,8 +22,8 @@ permalink: pretty
 # Navigation links
 header_pages:
   - index.html
-  - projects.md
-  - about.md
+  - /projectpage/index.md
+  - /about/index.md
 
 # Collections
 collections:
@@ -32,7 +32,7 @@ collections:
     permalink: /assets/images/:name/
   projects:
     output: true
-    permalink: /_projects/:name/
+    permalink: /projects/:name/
 
 # Front Matter Defaults
 defaults:

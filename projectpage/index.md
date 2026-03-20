@@ -44,7 +44,7 @@ A list of projects I've worked on
       <div class="project-tags">
         {% for tag in project.tags %}
           {% unless tag == "Featured" %}
-            <a href="/projects?tag={{ tag | slugify }}"
+            < href="/projects?tag={{ tag | slugify }}"
                class="tag-badge filter-tag"
                data-filter="{{ tag | slugify }}">
               {{ tag }}
