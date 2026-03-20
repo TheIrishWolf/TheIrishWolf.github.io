@@ -144,24 +144,24 @@ main img { /* Sets image display style */
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:24px;
 }
-.project-card{ /*  */
+.project-card{ /* Project card object */
   background:var(--card);
   border: 1px solid var(--border);
   border-radius:14px;
   padding:22px;
+
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  justify-content: center;
 }
-.project-card:hover{ /*  */
+.project-card:hover{ /* Project card object hover styling */
   transform:translateY(-6px);
   box-shadow:0 12px 28px rgba(0,0,0,.15);
 }
-.project-card p{ /*  */
-  color:var(--muted);
+
+.project-card desc{ /* Project card description text */
+  color:var(--text);
 }
-.project-card a{ /*  */
-  color:var(--accent);
+.project-card l{ /* Project card link text */
   text-decoration:none;
   font-weight:500;
 }
@@ -177,7 +177,7 @@ main img { /* Sets image display style */
    display: block;
    margin: 0 auto;
 }
-.project-card a:hover{ /*  */
+.project-card l:hover{ /* Project card link text hover styling */
   text-decoration: none;
 }
 
@@ -263,7 +263,7 @@ main img { /* Sets image display style */
   margin: 0;
   padding: 0;
 }
-.social-links a{ /* Social link styling */
+.social-links a{ /* Social link text styling */
   text-decoration: none;
   color: var(--text);
   font-size: 0.9rem;
@@ -279,7 +279,7 @@ main img { /* Sets image display style */
   background-color: var(--bg);
   transition: all 0.2s ease;
 }
-.social-links a:hover { /* Social link hover styling */
+.social-links a:hover { /* Social link text hover styling */
   text-decoration: none;
   cursor: pointer;
   color: var(--text);

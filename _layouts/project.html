@@ -12,15 +12,14 @@
         max-width: 60%;
         height: auto;
         display: block;
+        align-content: center;
       }
     </style>
   </head>
   <body>
 
     {% include header.html %}
-
-    <h1>{{ project.title }}</h1>
-    <h3>{{ project.description }}</h3>
+    
     <main>
       {{ content }}
     </main>
