@@ -39,14 +39,7 @@ main img { /* Sets image display style */
 .hover { /* Sets properties for hover state for given element */
   color: var(--accent);
 }
-.project-layout main img { /* Sets properties for images in the project-layout class */
-  max-width: 60%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  justify-content: center;
-}
-/* ---------- Section formatting ---------- */
+/* ---------- Formatting ---------- */
 /* Header */
 .site-header {
   position: sticky;
@@ -57,23 +50,22 @@ main img { /* Sets image display style */
 }
 /* Footer */
 .site-footer{
+  border-top: 1px solid var(--border);
   background: var(--bg);
-  margin-top:80px;
-  padding-top:20px;
-  border-top:1px solid var(--border);
-  color:var(--bg);
+  color: var(--text);
   font-size:.9rem;
+  margin-top: 80px; /* Distance from footer border to body content */
+  padding-top: 5px; /* Distance from footer border to footer content */
+  text-align: center;
 }
 /* Section */
 .section{ /* Creates the .section container to which navbar links can be generated */
   margin-top:70px;
-  justify-content: center;
+  text-align:center;
 }
 .section h2{ /* Sets properties of plaintext inside a given section  */
   margin-bottom:20px;
-  justify-content: center;
 }
-
 /* ---------- Elements ---------- */
 /* Intro */
 .intro{ /* Intro element styling */
@@ -281,9 +273,8 @@ main img { /* Sets image display style */
   border: 1px solid var(--border);
 
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 6px; /* between icons */
 
   background-color: var(--bg);
   transition: all 0.2s ease;
