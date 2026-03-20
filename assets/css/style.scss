@@ -38,11 +38,11 @@ main img { /* Sets image display style */
 }
 a:link, a:visited { /* unvisited/visited links */
   color: var(--text);
-  text-decoration: none;
+  text-decoration: bold;
 }
 a:hover, a:active { /* mouse over/selected links */
-  color: var(--text);
-  text-decoration: none;
+  color: var(--accent);
+  text-decoration: bold;
   cursor: pointer;
 }
 /* ---------- Formatting ---------- */
