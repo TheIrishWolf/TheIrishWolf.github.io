@@ -138,8 +138,28 @@ main img { /* Sets image display style */
   border: 1px solid var(--border);
 }
 
-/* Project Grid */
-.projects-grid{ /*  */
+/* Tag Filter Bar */
+.tag-filter-bar { /* Tag filter bar object container */
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tag-badge.active { /* Tag-filter-bar selected tag-badge stye*/
+  color: var(--text);
+  border: 1px solid var(--border);
+  background-color: var(--muted);
+  text-decoration: none;
+}
+.tag-filter-bar .tag-badge { /* Controls behaviour of tag-badge text objects within the tag-filter-bar container */
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* Project Card Grid */
+.projects-grid{ /* Project card grid section/container */
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:24px;
@@ -149,7 +169,6 @@ main img { /* Sets image display style */
   border: 1px solid var(--border);
   border-radius:14px;
   padding:22px;
-
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -157,38 +176,31 @@ main img { /* Sets image display style */
   transform:translateY(-6px);
   box-shadow:0 12px 28px rgba(0,0,0,.15);
 }
-
 .project-card desc{ /* Project card description text */
   color:var(--text);
 }
-.project-card l{ /* Project card link text */
+.project-card a{ /* Project card link text */
   text-decoration:none;
   font-weight:500;
 }
-.project-card img{ /*  */
+.project-card a:hover{ /* Project card link text hover styling */
+  text-decoration: none;
+}
+.project-card img{ /* Project card image styling */
   width: 100%;
   height: auto;
   object-fit: cover;
   justify-content: center;
 }
-.project-image { /*  */
-   max-width: 300px;
-   height: auto;
-   display: block;
-   margin: 0 auto;
-}
-.project-card l:hover{ /* Project card link text hover styling */
-  text-decoration: none;
-}
 
-/* Project tags */
-.project-tags { /*  */
+/* Project Card Tags */
+.project-tags { /* Project card tag section container */
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 8px;
 }
-.tag-badge { /*  */
+.tag-badge { /* Project card tag badges */
   font-size: 0.75rem;
   color: var(--text);
 
@@ -197,39 +209,25 @@ main img { /* Sets image display style */
 
   border: 1px solid var(--border);
   background-color: transparent;
-
+  text-decoration:none
   transition: all 0.2s ease;
 }
-.tag-badge:hover { /*  */
+.tag-badge:hover { /* Project card tag badges hover styling  */
   border: 1px solid var(--border);
-  color: var(--accent);
-  background-color: var(--bg);
-  transition: all 0.2s ease;
-}
-
-/* Tag filter bar */
-.tag-filter-bar { /*  */
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.tag-badge.active { /*  */
-  color: var(text);
-  border: 1px solid var(--border);
-  background-color: var(--bg);
-
-  text-decoration: none;
-}
-.tag-filter-bar .tag-badge { /*  */
-  cursor: pointer;
-  text-decoration: none;
   color: var(--text);
+  background-color: var(--muted);
+  transition: all 0.2s ease;
+  text-decoration:none
 }
 
-/* Skills */
-.project-skills{ /*  */
+/*.project-image {
+   max-width: 300px;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+}*/
+
+/*.project-skills{
   display:inline-block;
   background:var(--card);
   border: 1px solid var(--border);
@@ -237,8 +235,10 @@ main img { /* Sets image display style */
   padding:6px 10px;
   margin:5px;
   font-size:.9rem;
-}
-.skills span{ /*  */
+}*/
+
+/* Skills */
+.skills span{ /* Skills badge */
   margin-top:20px;
   display:inline-block;
   background:var(--card);
