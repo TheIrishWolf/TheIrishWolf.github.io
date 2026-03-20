@@ -36,6 +36,15 @@ main img { /* Sets image display style */
   border-bottom: 1px solid var(--border);
   color: var(--text);
 }
+a:link, a:visited { /* unvisited/visited links */
+  color: var(--text);
+  text-decoration: none;
+}
+a:hover, a:active { /* mouse over/selected links */
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
 /* ---------- Formatting ---------- */
 /* Header */
 .site-header {
