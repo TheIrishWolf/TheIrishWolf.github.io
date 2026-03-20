@@ -13,6 +13,9 @@ a:link, a:visited { /* unvisited/visited links */
   color: var(--text);
   text-decoration: none;
   border: 1px solid var(--border);
+  border-radius:8px;
+  padding:6px 10px;
+  margin:5px;
 
   background-color: var(--bg);
 }
@@ -20,6 +23,9 @@ a:hover, a:active { /* mouse over/selected links */
   color: var(--text);
   text-decoration: none;
   border: 1px solid var(--border);
+  border-radius:8px;
+  padding:6px 10px;
+  margin:5px;
 
   background-color: var(--muted);
   cursor: pointer;
