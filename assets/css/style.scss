@@ -36,9 +36,6 @@ main img { /* Sets image display style */
   border-bottom: 1px solid var(--border);
   color: var(--text);
 }
-.hover { /* Sets properties for hover state for given element */
-  color: var(--accent);
-}
 /* ---------- Formatting ---------- */
 /* Header */
 .site-header {
@@ -176,7 +173,7 @@ main img { /* Sets image display style */
   transform:translateY(-6px);
   box-shadow:0 12px 28px rgba(0,0,0,.15);
 }
-.project-card desc{ /* Project card description text */
+.project-card p{ /* Project card description text */
   color:var(--text);
 }
 .project-card a{ /* Project card link text */
@@ -209,15 +206,14 @@ main img { /* Sets image display style */
 
   border: 1px solid var(--border);
   background-color: transparent;
-  text-decoration:none
+  text-decoration:none;
   transition: all 0.2s ease;
 }
 .tag-badge:hover { /* Project card tag badges hover styling  */
   border: 1px solid var(--border);
   color: var(--text);
   background-color: var(--muted);
-  transition: all 0.2s ease;
-  text-decoration:none
+  text-decoration:none;
 }
 
 /*.project-image {

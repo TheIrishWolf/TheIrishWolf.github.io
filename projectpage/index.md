@@ -38,7 +38,7 @@ A list of projects I've worked on
       <!-- Display project image, name, and description -->
       <img src="{{ project.image }}" alt="{{ project.title }}">
       <h3>{{ project.title }}</h3>
-      <desc>{{ project.description }}</desc>
+      <p>{{ project.description }}</p>
 
       <!-- Display Tag Badges -->
       <div class="project-tags">
