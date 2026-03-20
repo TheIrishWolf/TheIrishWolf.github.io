@@ -1,0 +1,26 @@
+main {
+  justify-content: center;
+  align-items: center;
+}
+main img {
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  height: auto;
+  display: block;
+}
+a:link, a:visited { /* unvisited/visited links */
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+
+  background-color: var(--bg);
+}
+a:hover, a:active { /* mouse over/selected links */
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+
+  background-color: var(--muted);
+  cursor: pointer;
+}

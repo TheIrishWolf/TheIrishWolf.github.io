@@ -36,32 +36,6 @@ main img { /* Sets image display style */
   border-bottom: 1px solid var(--border);
   color: var(--text);
 }
-.project-layout {
-  justify-content: center;
-  align-items: center;
-}
-.project-layout main img {
-  justify-content: center;
-  align-items: center;
-  max-width: 60%;
-  height: auto;
-  display: block;
-}
-project-layout:link, project-layout:visited { /* unvisited/visited links */
-  color: var(--text);
-  text-decoration: none;
-  border: 1px solid var(--border);
-
-  background-color: var(--bg);
-}
-project-layout:hover, project-layout:active { /* mouse over/selected links */
-  color: var(--text);
-  text-decoration: none;
-  border: 1px solid var(--border);
-
-  background-color: var(--muted);
-  cursor: pointer;
-}
 /* ---------- Formatting ---------- */
 /* Header */
 .site-header {
