@@ -3,11 +3,10 @@ main {
   align-items: center;
 }
 main img {
-  justify-content: center;
-  align-items: center;
   max-width: 60%;
   height: auto;
-  display: block;
+  display: block; /* makes image behave as a block */
+  margin: 5 auto; /* Centers display block and adds a 5px above and below from text */
 }
 a:link, a:visited { /* unvisited/visited links */
   color: var(--text);
