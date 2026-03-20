@@ -37,14 +37,18 @@ main img { /* Sets image display style */
   color: var(--text);
 }
 a:link, a:visited { /* unvisited/visited links */
-  color: var(--accent);
+  color: var(--text);
   text-decoration: none;
-  text-shadow: 2px 2px var(--muted);
+  border: 1px solid var(--border);
+
+  background-color: var(--bg);
 }
 a:hover, a:active { /* mouse over/selected links */
-  color: var(--accent);
+  color: var(--text);
   text-decoration: none;
-  text-shadow: 4px 4px var(--muted);
+  border: 1px solid var(--border);
+
+  background-color: var(--muted);
   cursor: pointer;
 }
 /* ---------- Formatting ---------- */
