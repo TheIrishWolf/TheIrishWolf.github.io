@@ -13,8 +13,8 @@ a:link, a:visited { /* unvisited/visited links */
   text-decoration: none;
   border: 1px solid var(--border);
   border-radius:8px;
-  padding:6px 10px;
-  margin:5px;
+  padding:2px 2px;
+  margin:1px;
 
   background-color: var(--bg);
 }
